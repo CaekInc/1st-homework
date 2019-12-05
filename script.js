@@ -12,14 +12,18 @@ let appData = {
 };
 
 
-let q1 = prompt("Введите обязательную статью расходов в этом месяце", ""),
-    q2 = prompt("Во сколько обойдется?", ""),
-    q3 = prompt("Введите обязательную статью расходов в этом месяце", ""),
-    q4 = prompt("Во сколько обойдется?", "");
 
-appData.expenses.q1 = q2;
-appData.expenses.q3 = q4;
 
-// console.log(appData.budget);
-console.log(appData.expenses);
+
+
+for (let i = 0; i < 2; i++) {
+    let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
+    b = prompt("Во сколько обойдется?", "");
+    if ( (typeof(a) != null) && (typeof(b) != null) && a.length != 0 && b.length != 0 && a.length > 50 && b.length > 50 ){
+        appData.expenses[a] = b;
+        console.log('done');
+    }
+    
+}
+
 alert(money/30);
